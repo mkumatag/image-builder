@@ -20,10 +20,10 @@ common_rpms:
 - curl
 - ebtables
 - jq
-- open-vm-tools
+#- open-vm-tools
 - python3-pip
-- python-netifaces
-- python-requests
+#- python-netifaces
+#- python-requests
 - socat
 - sysstat
 - yum-utils
