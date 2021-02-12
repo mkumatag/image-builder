@@ -17,6 +17,7 @@ extra_debs: ""
 pinned_debs: []
 
 redhat_epel_rpm: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+redhat_epel_rpm_8: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
 rpms: ""
 extra_rpms: ""
 

@@ -26,6 +26,16 @@
     - cloud-initramfs-growroot
   when: ansible_os_family == "Debian"
 
+- name: Install cloud-init packages on ppc64le
+  yum:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      - http://people.redhat.com/~eterrell/cloud-init/cloud-init-19.4-11.el8_3.1.noarch.rpm
+      - cloud-utils-growpart
+  when: ansible_os_family == "RedHat" and ansible_architecture == "ppc64le"
+
 - name: Install cloud-init packages
   yum:
     name: "{{ packages }}"
@@ -34,7 +44,7 @@
     packages:
     - cloud-init
     - cloud-utils-growpart
-  when: ansible_os_family == "RedHat"
+  when: ansible_os_family == "RedHat" and ansible_architecture != "ppc64le"
 
 #- name: Unlock password
 #  replace:
